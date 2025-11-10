@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pulindu Godage - Portfolio</title>
-    <link rel="icon" type="image/svg+xml" href="assests/Images/Favicon.jpg">
+    <link rel="icon" type="image/svg+xml" href="Assests/Images/Favicon.jpg">
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome is already here, which is perfect for the icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,6 +29,10 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <!-- ADDED: This is the new menu icon -->
+        <div id="menu-icon" class="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
     </header>
 
     <main>
@@ -41,14 +46,14 @@
                 <a href="#" class="hero-btn">Download CV</a>
             </div>
             <div class="hero-image-container">
-                <img src="assests/Images/Profile Image.jpg" alt="Pulindu Godage Profile">
+                <img src="Assests/Images/Profile Image.jpg" alt="Pulindu Godage Profile" class="hero-img"> <!-- Added class for consistency -->
             </div>
         </section>
 
 ---
         <section id="about">
             <div class="container">
-                <img src="assests/Images/aboutpage image.jpg" alt="Pulindu Godage" class="about-image">
+                <img src="Assests/Images/aboutpage image.jpg" alt="Pulindu Godage" class="about-image">
                 <h2 class="section-heading">The Story Behind Me</h2>
                 
                 <div class="about-text">
@@ -223,12 +228,12 @@
             <div class="container">
                 <h2 class="section-heading">Gallery</h2>
                 <div class="gallery-grid">
-                    <div class="gallery-item"><img src="assests/Images/gallery image 01.jpg" alt="Gallery Image 1"></div>
-                    <div class="gallery-item"><img src="assests/Images/gallery image 02.jpg" alt="Gallery Image 2"></div>
-                    <div class="gallery-item"><img src="assests/Images/gallery image 03.jpg" alt="Gallery Image 3"></div>
-                    <div class="gallery-item"><img src="assests/Images/gallery image 04.jpg" alt="Gallery Image 4"></div>
-                    <div class="gallery-item"><img src="assests/Images/gallery image 05.jpg" alt="Gallery Image 5"></div>
-                    <div class="gallery-item"><img src="assests/Images/gallery image 06.jpg" alt="Gallery Image 6"></div>
+                    <div class="gallery-item"><img src="Assests/Images/gallery image 01.jpg" alt="Gallery Image 1"></div>
+                    <div class="gallery-item"><img src="Assests/Images/gallery image 02.jpg" alt="Gallery Image 2"></div>
+                    <div class="gallery-item"><img src="Assests/Images/gallery image 03.jpg" alt="Gallery Image 3"></div>
+                    <div class="gallery-item"><img src="Assests/Images/gallery image 04.jpg" alt="Gallery Image 4"></div>
+                    <div class="gallery-item"><img src="Assests/Images/gallery image 05.jpg" alt="Gallery Image 5"></div>
+                    <div class="gallery-item"><img src="Assests/Images/gallery image 06.jpg" alt="Gallery Image 6"></div>
                 </div>
             </div>
         </section>
@@ -269,34 +274,34 @@
                 <div class="contact-form-container">
                     <h3>Send a Message</h3>
 
-                     <form action="https://formspree.io/f/manawaeg" method="POST">
-                        <div class="form-grid">
-            
-                        <label for="name" class="form-label">Name</label>
-                        <div class="form-group">
-                         <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                        </div>
-            
-                        <label for="email" class="form-label">Email</label>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                        </div>
-            
-                        <label for="subject" class="form-label">Subject</label>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject of your message" required>
-                        </div>
-            
-                        <label for="message" class="form-label">Message</label>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
-                        </div>
+                       <form action="https://formspree.io/f/manawaeg" method="POST">
+                           <div class="form-grid">
+                
+                           <label for="name" class="form-label">Name</label>
+                           <div class="form-group">
+                             <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                           </div>
+                
+                           <label for="email" class="form-label">Email</label>
+                           <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                           </div>
+                
+                           <label for="subject" class="form-label">Subject</label>
+                           <div class="form-group">
+                                <input type="text" id="subject" name="subject" placeholder="Subject of your message" required>
+                           </div>
+                
+                           <label for="message" class="form-label">Message</label>
+                           <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
+                           </div>
 
-                        <div class="form-submit-row">
-                            <button type="submit" class="submit-btn">Send Message</button>
-                        </div>
-                        </div>
-                    </form>
+                           <div class="form-submit-row">
+                                <button type="submit" class="submit-btn">Send Message</button>
+                           </div>
+                           </div>
+                       </form>
                 </div>
             </div>
         </section>
@@ -309,7 +314,7 @@
                <div class="social-links">
                     <a href="https://www.linkedin.com/in/pulindu-godage-208568379/" target="_blank" aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
-                     </a>
+                      </a>
                     <a href="https://wa.me/+94701317931" target="_blank" aria-label="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
@@ -369,6 +374,41 @@
             </div>
         </div>
     </footer>
+
+    <!-- ADDED: This script provides the click functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuIcon = document.getElementById('menu-icon');
+            const navMenu = document.querySelector('nav');
+            const icon = menuIcon.querySelector('i');
+            const navLinks = document.querySelectorAll('nav ul li a');
+
+            // Toggle menu on icon click
+            menuIcon.addEventListener('click', () => {
+                navMenu.classList.toggle('nav-active');
+                
+                // Toggle icon between bars and X
+                if (navMenu.classList.contains('nav-active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // Close menu when a link is clicked
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navMenu.classList.contains('nav-active')) {
+                        navMenu.classList.remove('nav-active');
+                        icon.classList.add('fa-bars');
+                        icon.classList.remove('fa-times');
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>

@@ -1,5 +1,4 @@
-
-        :root {
+:root {
             --primary-bg: #1a1a1a;
             --secondary-bg: #3a3a3a;
             --card-bg: #2a2a2a; /* New dark background for contact cards/form */
@@ -121,6 +120,20 @@
         }
 
         nav ul li a:hover {
+            color: var(--primary-accent);
+        }
+
+        /* ADDED: Styles for the new menu icon */
+        .menu-icon {
+            display: none; /* Hidden by default on desktop */
+            font-size: 1.8em;
+            color: var(--text-light);
+            cursor: pointer;
+            padding: 0 20px;
+            transition: color 0.3s ease;
+        }
+
+        .menu-icon:hover {
             color: var(--primary-accent);
         }
 
@@ -495,25 +508,26 @@
         }
 
     .gallery-item {
-        border: 3px solid var(--light-green);
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 0 10px rgba(238, 136, 19, 0.979);
-        }
+         border: 3px solid var(--light-green); /* This variable isn't defined, replaced with accent */
+         border-color: var(--primary-accent); 
+         border-radius: 8px;
+         overflow: hidden;
+         box-shadow: 0 0 10px rgba(255, 180, 0, 0.7); /* Updated shadow to match accent */
+         }
 
     .gallery-item img {
-        width: 100%;
-        height: 500px;
-        object-fit: cover;
-        border-radius: 0;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-        cursor: pointer;
-        }
+         width: 100%;
+         height: 500px;
+         object-fit: cover;
+         border-radius: 0;
+         transition: transform 0.3s ease, opacity 0.3s ease;
+         cursor: pointer;
+         }
 
     .gallery-item img:hover {
-        transform: scale(1.1);
-        opacity: 0.9;
-        }
+         transform: scale(1.1);
+         opacity: 0.9;
+         }
 
         /* --- Contact Section (UPDATED) --- */
         #contact {
@@ -810,7 +824,7 @@
             color: var(--text-light);
         }
 
-        /* --- Responsive Design --- */
+        /* --- Responsive Design (UPDATED) --- */
         @media (max-width: 992px) {
             .project-grid, .assignment-grid, .gallery-grid {
                 grid-template-columns: 1fr;
@@ -834,31 +848,85 @@
         }
         
         @media (max-width: 768px) {
-            /* This makes your navigation stack vertically */
-            nav ul {
-                flex-direction: column; /* Stack links vertically */
-                align-items: center;    /* Center the stacked links */
-                padding-right: 0;       /* Remove side padding */
-                width: 100%;            /* Ensure it uses the full width */
-                margin-top: 15px;       /* Add some space below the logo */
+            
+            /* --- UPDATED: Header & Nav for Mobile --- */
+
+            /* Keep header as a row but justify content */
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px;
+                /* The 'position: relative' is removed from here
+                   to let the sticky positioning work with the 
+                   absolutely positioned nav */
             }
 
-            /* This styles the individual links for vertical stacking */
-            nav ul li {
-                margin-left: 0;         /* Remove horizontal margin */
-                margin-bottom: 15px;    /* Add vertical space between links */
-            }
-            header {
-                flex-direction: column;
-                padding: 15px;
-            }
+            /* Remove margin from logo container */
             .logo-container {
                 padding-left: 0;
-                margin-bottom: 15px;
+                margin-bottom: 0; 
             }
             .logo {
                 font-size: 1.2em;
             }
+
+            /* Show the menu icon */
+            .menu-icon {
+                display: block;
+            }
+
+            /* This is the slide-down container */
+            nav {
+                position: absolute;
+                top: 100%; /* Position right below the header */
+                left: 0;
+                width: 100%;
+                background-color: var(--secondary-bg);
+                
+                /* This is the slide trick */
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease-out;
+
+                border-radius: 0 0 var(--border-radius-card) var(--border-radius-card);
+                box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+            }
+
+            /* This class will be added by JavaScript */
+            nav.nav-active {
+                max-height: 500px; /* An arbitrary high value */
+                border-top: 2px solid var(--primary-accent);
+            }
+
+            /* This is the list *inside* the slide-down container */
+            nav ul {
+                flex-direction: column; /* Stack links vertically */
+                align-items: center;
+                width: 100%;
+                padding: 20px 0 10px 0; /* Add padding for spacing */
+            }
+
+            nav ul li {
+                margin-left: 0;
+                margin-bottom: 20px; /* Space out the links */
+                width: 100%;
+                text-align: center;
+            }
+            
+            nav ul li a {
+                font-size: 1.2em;
+                padding: 10px 0;
+                display: block; /* Make link fill the width */
+                width: 100%;
+            }
+            
+            nav ul li a:hover {
+                background-color: rgba(255, 180, 0, 0.1);
+            }
+
+            /* --- End of Header & Nav Updates --- */
+
 
             #home {
                 flex-direction: column;
@@ -885,8 +953,9 @@
                 padding: 10px 20px;
                 font-size: 1em;
             }
-            .hero-image {
-                max-width: 100%;
+            .hero-image-container { /* Updated from .hero-image */
+                max-width: 80%; /* Give it some margin */
+                padding: 10px;
             }
 
             .section-heading {
@@ -910,20 +979,10 @@
                 height: 45px;
             }
             
-            .contact-container {
-                flex-direction: column;
-            }
+            /* Contact form was already stacking, this is fine */
             
             .footer-container {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
         }
-    
-
-
-
-
-
-
-        
