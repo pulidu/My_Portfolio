@@ -834,8 +834,19 @@
         }
         
         @media (max-width: 768px) {
+            /* This makes your navigation stack vertically */
             nav ul {
-                display: none;
+                flex-direction: column; /* Stack links vertically */
+                align-items: center;    /* Center the stacked links */
+                padding-right: 0;       /* Remove side padding */
+                width: 100%;            /* Ensure it uses the full width */
+                margin-top: 15px;       /* Add some space below the logo */
+            }
+
+            /* This styles the individual links for vertical stacking */
+            nav ul li {
+                margin-left: 0;         /* Remove horizontal margin */
+                margin-bottom: 15px;    /* Add vertical space between links */
             }
             header {
                 flex-direction: column;
@@ -915,201 +926,4 @@
 
 
 
-        /* --- Container --- */
-        .container {
-            width: 100%;
-            max-width: 1280px; /* Equivalent to container mx-auto with breakpoints */
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* --- Services Header --- */
-        .services-header {
-            text-align: center;
-            margin-bottom: 3rem; /* mb-12 */
-        }
-
-        .services-subtitle {
-            font-size: 0.875rem; /* text-sm */
-            text-transform: uppercase;
-            font-weight: 600; /* font-semibold */
-            color: #818cf8; /* text-indigo-400 */
-            letter-spacing: 0.05em; /* tracking-wider */
-            margin: 0;
-        }
-
-        .services-title {
-            font-size: 2.25rem; /* text-3xl */
-            font-weight: 700; /* font-bold */
-            color: #ffffff; /* text-white */
-            margin-top: 0.5rem; /* mt-2 */
-            margin-bottom: 0;
-        }
-
-        /* --- Services Grid --- */
-        .services-grid {
-            display: grid;
-            grid-template-columns: 1fr; /* Default: 1 column */
-            gap: 2rem; /* gap-8 */
-        }
-
-        /* --- Service Card --- */
-        .service-card {
-            background-color: #1f2937; /* bg-gray-800 */
-            padding: 1.5rem; /* p-6 */
-            border-radius: 0.5rem; /* rounded-lg */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .service-card .icon {
-            font-size: 2.25rem; /* text-4xl */
-            margin-bottom: 1rem; /* mb-4 */
-            color: #818cf8; /* text-indigo-400 */
-        }
-
-        .service-card h4 {
-            font-size: 1.25rem; /* text-xl */
-            font-weight: 600; /* font-semibold */
-            color: #ffffff; /* text-white */
-            margin-top: 0;
-            margin-bottom: 0.5rem; /* mb-2 */
-        }
-
-        .service-card p {
-            color: #9ca3af; /* text-gray-400 */
-            font-size: 0.875rem; /* text-sm */
-            margin-bottom: 1rem; /* mb-4 */
-            flex-grow: 1; /* flex-grow */
-            line-height: 1.4;
-        }
-
-        .service-card .read-more {
-            color: #818cf8; /* text-indigo-400 */
-            font-weight: 500; /* font-medium */
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .service-card .read-more:hover {
-            color: #a7affb; /* hover:text-indigo-300 */
-        }
-
-        /* --- Modal Styles --- */
-        .modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 50;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem; /* p-4 */
-
-            /* Hide by default */
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out, visibility 0.3s;
-            pointer-events: none;
-        }
-
-        /* Show when targeted */
-        .modal:target {
-            visibility: visible;
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .modal-backdrop {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-        }
-
-        .modal-content {
-            background-color: #1f2937; /* bg-gray-800 */
-            border-radius: 0.5rem; /* rounded-lg */
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* shadow-2xl */
-            padding: 2rem; /* p-8 */
-            max-width: 500px; /* max-w-md */
-            width: 100%;
-            position: relative;
-            z-index: 10;
-            border: 1px solid #374151; /* border-gray-700 */
-        }
-
-        .modal-close-btn {
-            position: absolute;
-            top: 1rem; /* top-4 */
-            right: 1rem; /* right-4 */
-            color: #9ca3af; /* text-gray-400 */
-            font-size: 1.875rem; /* text-2xl (approx) */
-            font-weight: 700; /* font-bold */
-            text-decoration: none;
-            line-height: 1;
-            transition: color 0.3s;
-        }
-
-        .modal-close-btn:hover {
-            color: #ffffff; /* hover:text-white */
-        }
-
-        .modal-content h3 {
-            font-size: 1.5rem; /* text-2xl */
-            font-weight: 700; /* font-bold */
-            color: #ffffff; /* text-white */
-            margin-top: 0;
-            margin-bottom: 1rem; /* mb-4 */
-        }
-
-        .modal-content p {
-            color: #d1d5db; /* text-gray-300 */
-            margin-bottom: 1.5rem; /* mb-6 */
-            line-height: 1.5;
-        }
-
-        .modal-content ul {
-            list-style: none;
-            padding-left: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem; /* space-y-3 */
-        }
-
-        .modal-content li {
-            display: flex;
-            align-items: center;
-            color: #e5e7eb; /* text-gray-200 */
-        }
-
-        .modal-content li span {
-            color: #ef4444; /* text-red-500 */
-            margin-right: 0.75rem; /* mr-3 */
-            font-weight: 600;
-        }
-
-        /* --- Responsive Design --- */
-        @media (min-width: 640px) { /* sm: */
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr); /* grid-cols-2 */
-            }
-            .services-title {
-                font-size: 2.25rem; /* md:text-4xl */
-            }
-        }
-
-        @media (min-width: 1024px) { /* lg: */
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr); /* Always 2 columns for large screens */
-            }
-        }
+        
