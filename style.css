@@ -898,11 +898,11 @@
 
 
 /* ==============================================
-   HOME PAGE ANIMATIONS
+   NEW ANIMATION STYLES ADDED BELOW
 ==============================================
 */
 
-/* --- Keyframes --- */
+/* --- NEW: Keyframes --- */
 @keyframes slideUpFade {
     from { 
         opacity: 0; 
@@ -937,7 +937,7 @@
 }
 
 
-/* --- Home Section Animation Prep --- */
+/* --- NEW: Home Section Animation Prep --- */
 /* Hide all animated elements initially */
 .hero-content .hi,
 .hero-content .name-line-1,
@@ -950,7 +950,7 @@
     animation-fill-mode: forwards; /* Ensures they stay visible after animating */
 }
 
-/* --- Home Section Animations --- */
+/* --- NEW: Home Section Animations --- */
 
 /* Staggered text animation */
 .hero-content .hi {
@@ -991,59 +991,6 @@
     animation: pulseBorder 3s infinite ease-in-out;
     animation-delay: 1.5s; /* Start pulsing after everything is loaded */
     box-shadow: 0 0 15px rgba(255, 180, 0, 0.4); /* Initial state for pulse */
-}
-
-
-/* ==============================================
-   NEW ON-SCROLL ANIMATIONS (FOR ALL SECTIONS)
-==============================================
-*/
-
-/* 1. Define the animation for all sections */
-/* We will apply this to all the items we want to animate */
-#about .about-image,
-#about .about-text,
-#about .education-item,
-#skills .skill-item,
-#projects .project-card,
-#projects .assignment-card,
-#gallery .gallery-item,
-#contact .service-card,
-#contact .contact-form-container {
-    /* Use the same animation we used for the Home section */
-    /* "both" is a fill-mode that applies the 0% state (invisible)
-       before it runs */
-    animation: slideUpFade 0.6s ease-out both;
-    
-    /* * This is the magic:
-     * 1. animation-timeline: view() links the animation to the scrollbar.
-     * 2. animation-range: tells it WHEN to play.
-     * This means "Start animation when 10% of the element is visible,
-     * and finish it by the time 30% of it is visible."
-    */
-    animation-timeline: view();
-    animation-range: entry 10% cover 30%;
-}
-
-
-/* * 2. The CRITICAL Safety Net
- * This tells browsers that DON'T support "animation-timeline"
- * to just make the elements visible normally.
-*/
-@supports not (animation-timeline: view()) {
-    #about .about-image,
-    #about .about-text,
-    #about .education-item,
-    #skills .skill-item,
-    #projects .project-card,
-    #projects .assignment-card,
-    #gallery .gallery-item,
-    #contact .service-card,
-    #contact .contact-form-container {
-        opacity: 1;
-        transform: none;
-        animation: none; /* Cancel the animation entirely */
-    }
 }
 
 
