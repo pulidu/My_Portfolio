@@ -851,6 +851,149 @@
             color: var(--text-light);
         }
 
+        /* --- GitHub Button Style (with Icon) --- */
+
+.github-btn {
+    display: inline-flex; /* Use flexbox for easy alignment */
+    align-items: center; /* Vertically centers the icon and text */
+    justify-content: center; /* Horizontally centers content */
+    
+    padding: 10px 18px;
+    margin-top: 15px;
+    background-color: #333;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* --- GitHub Icon (using inline SVG) --- */
+.github-btn::before {
+    content: ''; /* Empty content, background image will be used */
+    display: inline-block;
+    width: 16px;  /* Icon size */
+    height: 16px; /* Icon size */
+    margin-right: 8px; /* Space between icon and text */
+    
+    /* * This is the GitHub icon.
+     * It's an SVG that is "URL-encoded" and filled with white.
+     */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z'/%3e%3c/svg%3e");
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* --- Hover & Focus Effect --- */
+.github-btn:hover,
+.github-btn:focus {
+    background-color: #555;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ==============================================
+   NEW ANIMATION STYLES ADDED BELOW
+==============================================
+*/
+
+/* --- NEW: Keyframes --- */
+@keyframes slideUpFade {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes slideInRight {
+    from { 
+        opacity: 0; 
+        transform: translateX(50px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateX(0); 
+    }
+}
+
+@keyframes pulseBorder {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(255, 180, 0, 0.4);
+        border-color: var(--primary-accent);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 180, 0, 0.8);
+        border-color: #fff; /* Bright pulse */
+    }
+}
+
+
+/* --- NEW: Home Section Animation Prep --- */
+/* Hide all animated elements initially */
+.hero-content .hi,
+.hero-content .name-line-1,
+.hero-content .name-line-2,
+.hero-content .tagline,
+#home .hero-content p:nth-of-type(3), /* Targets "Software Engineer..." */
+.hero-content .hero-btn,
+.hero-image-container {
+    opacity: 0;
+    animation-fill-mode: forwards; /* Ensures they stay visible after animating */
+}
+
+/* --- NEW: Home Section Animations --- */
+
+/* Staggered text animation */
+.hero-content .hi {
+    animation: slideUpFade 0.6s 0.2s ease-out forwards; /* animation, duration, delay, easing, fill */
+}
+
+.hero-content .name-line-1 {
+    animation: slideUpFade 0.6s 0.4s ease-out forwards;
+    display: block; /* Make spans behave like blocks for transform */
+}
+
+.hero-content .name-line-2 {
+    animation: slideUpFade 0.6s 0.6s ease-out forwards;
+    display: block; /* Make spans behave like blocks for transform */
+}
+
+.hero-content .tagline {
+    animation: slideUpFade 0.6s 0.8s ease-out forwards;
+}
+
+#home .hero-content p:nth-of-type(3) {
+    animation: slideUpFade 0.6s 1.0s ease-out forwards;
+}
+
+.hero-content .hero-btn {
+    animation: slideUpFade 0.6s 1.2s ease-out forwards;
+}
+
+/* Image animation */
+.hero-image-container {
+    animation: slideInRight 0.8s 0.5s ease-out forwards;
+}
+
+/* Unique touch: Add the pulse to the border *after* it slides in */
+.hero-image-container::before {
+    /* The original border style is already defined */
+    /* Add the animation */
+    animation: pulseBorder 3s infinite ease-in-out;
+    animation-delay: 1.5s; /* Start pulsing after everything is loaded */
+    box-shadow: 0 0 15px rgba(255, 180, 0, 0.4); /* Initial state for pulse */
+}
+
+
         /* --- Responsive Design (UPDATED) --- */
         @media (max-width: 992px) {
             .project-grid, .assignment-grid, .gallery-grid {
@@ -926,7 +1069,7 @@
                 border-top: 2px solid var(--primary-accent);
             }
 
-            /* This is the list *inside* the slide-down container */
+            /* This is the list inside the slide-down container */
             nav ul {
                 flex-direction: column; /* Stack links vertically */
                 align-items: center;
@@ -1013,50 +1156,3 @@
                 text-align: center;
             }
         }
-
-        
-
-        /* --- GitHub Button Style (with Icon) --- */
-
-.github-btn {
-    display: inline-flex; /* Use flexbox for easy alignment */
-    align-items: center; /* Vertically centers the icon and text */
-    justify-content: center; /* Horizontally centers content */
-    
-    padding: 10px 18px;
-    margin-top: 15px;
-    background-color: #333;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 500;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-/* --- GitHub Icon (using inline SVG) --- */
-.github-btn::before {
-    content: ''; /* Empty content, background image will be used */
-    display: inline-block;
-    width: 16px;  /* Icon size */
-    height: 16px; /* Icon size */
-    margin-right: 8px; /* Space between icon and text */
-    
-    /* * This is the GitHub icon.
-     * It's an SVG that is "URL-encoded" and filled with white.
-     */
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z'/%3e%3c/svg%3e");
-    
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-/* --- Hover & Focus Effect --- */
-.github-btn:hover,
-.github-btn:focus {
-    background-color: #555;
-    color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
