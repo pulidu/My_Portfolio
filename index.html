@@ -6,7 +6,6 @@
     <title>Pulindu Godage - Portfolio</title>
     <link rel="icon" type="image/svg+xml" href="assests/Images/Favicon.jpg">
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome is already here, which is perfect for the icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +27,6 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <!-- ADDED: This is the new menu icon -->
         <div id="menu-icon" class="menu-icon">
             <i class="fas fa-bars"></i>
         </div>
@@ -42,15 +40,13 @@
                 <h1 class="name">I'M PULINDU<br>GODAGE</h1>
                 <p class="tagline">Crafting Code with Creativity</p>
                 <p>Software Engineer blending clean code with elegant design to build digital experiences that matter.</p>
-                <!-- <a href="assests/pdf/Pulindu_Godage.pdf" class="hero-btn" target="_blank">Download CV</a> -->
                  <a href="" class="hero-btn" target="_blank">Download CV</a>
             </div>
             <div class="hero-image-container">
-                <img src="assests/Images/Profile Image.jpg" alt="Pulindu Godage Profile" class="hero-img"> <!-- Added class for consistency -->
+                <img src="assests/Images/55.jpg" alt="Pulindu Godage Profile" class="hero-img"> 
             </div>
         </section>
 
----
         <section id="about">
             <div class="container">
                 <img src="assests/Images/aboutpage image.jpg" alt="Pulindu Godage" class="about-image">
@@ -88,7 +84,6 @@
             </div>
         </section>
 
----
         <section id="skills">
             <div class="container">
                 <h2 class="section-heading">Things I'm Good At</h2>
@@ -113,101 +108,97 @@
             </div>
         </section>
 
----
-       <section id="projects">
-    <div class="container">
-        <h2 class="section-heading">Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <div class="card-image"><img src="https://vinish.dev/wp-content/uploads/2025/05/lms.png" alt="Library"></div>
-                <div class="card-body">
-                    <h4>Library Management System (CLI)</h4>
-                    <h5>Short Description:</h5>
-                    <p>A Java console-based Library Management System for managing books, members, and borrowing records efficiently.</p>
-                    <h5>Tech Used:</h5>
-                    <p> Java,Arrays</p>
-                    <h5>What I Learned:</h5>
-                    <p>Data handling using arrays, improving logical problem-solving, and building structured CLI applications in Java.</p>
-                    <a href="https://github.com/pulidu/Programming-Fundamentals" class="github-btn" target="_blank">View on GitHub</a>
-                </div>
-            </div>
+        <section id="projects">
+            <div class="container">
+                <h2 class="section-heading">Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="card-image"><img src="assests/Images/library.png" alt="Library"></div>
+                        <div class="card-body">
+                            <h4>Library Management System (CLI)</h4>
+                            <h5>Short Description:</h5>
+                            <p>A Java console-based Library Management System for managing books, members, and borrowing records efficiently.</p>
+                            <h5>Tech Used:</h5>
+                            <p> Java,Arrays</p>
+                            <h5>What I Learned:</h5>
+                            <p>Data handling using arrays, improving logical problem-solving, and building structured CLI applications in Java.</p>
+                            <a href="https://github.com/pulidu/Programming-Fundamentals" class="github-btn" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
 
-            <div class="project-card">
-                <div class="card-image"><img src="assests/Images/Socket Programming.png" alt="SocketProgramming"></div>
-                <div class="card-body">
-                    <h4>Group Chat Application (Socket Programming)</h4>
-                    <h5>Short Description:</h5>
-                    <p>A JavaFX real-time group chat app using sockets, enabling multi-user messaging with client-server communication and concurrency handling.</p>
-                    <h5>Tech Used:</h5>
-                    <p>Java, JavaFX, Socket Programming, Multithreading, MVC Architecture.</p>
-                    <h5>What I Learned:</h5>
-                    <p>Implementing real-time socket communication, managing multi-client threads, designing interactive JavaFX UIs, and understanding client-server data transmission.</p>
-                    <a href="https://github.com/pulidu/GroupChatApplication" class="github-btn" target="_blank">View on GitHub</a>
-                </div>
-            </div>
+                    <div class="project-card">
+                        <div class="card-image"><img src="assests/Images/Socket Programming.png" alt="SocketProgramming"></div>
+                        <div class="card-body">
+                            <h4>Group Chat Application (Socket Programming)</h4>
+                            <h5>Short Description:</h5>
+                            <p>A JavaFX real-time group chat app using sockets, enabling multi-user messaging with client-server communication and concurrency handling.</p>
+                            <h5>Tech Used:</h5>
+                            <p>Java, JavaFX, Socket Programming, Multithreading, MVC Architecture.</p>
+                            <h5>What I Learned:</h5>
+                            <p>Implementing real-time socket communication, managing multi-client threads, designing interactive JavaFX UIs, and understanding client-server data transmission.</p>
+                            <a href="https://github.com/pulidu/GroupChatApplication" class="github-btn" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
 
-            <div class="project-card">
-                <div class="card-image"><img src="assests/Images/Elite Driving School Orm Project.png" alt="ORM"></div>
-                <div class="card-body">
-                    <h4>Driving School Management System (Layered Architecture with Hibernate ORM)</h4>
-                    <h5>Short Description:</h5>
-                    <p>A JavaFX app built with Scene Builder using layered architecture and Hibernate ORM for efficient CRUD management of students, instructors, and sessions.</p>
-                    <h5>Tech Used:</h5>
-                    <p>Java, JavaFX, Scene Builder, Hibernate ORM, Layered Architecture (MVC).</p>
-                    <h5>What I Learned:</h5>
-                    <p>Using Hibernate ORM, layered architecture, and Scene Builder for efficient, SQL-free data management and intuitive UI design.</p>
-                    <a href="https://github.com/pulidu/ORM-Final-Project" class="github-btn" target="_blank">View on GitHub</a>
-                </div>
-            </div>
+                    <div class="project-card">
+                        <div class="card-image"><img src="assests/Images/Elite Driving School Orm Project.png" alt="ORM"></div>
+                        <div class="card-body">
+                            <h4>Driving School Management System (Layered Architecture with Hibernate ORM)</h4>
+                            <h5>Short Description:</h5>
+                            <p>A JavaFX app built with Scene Builder using layered architecture and Hibernate ORM for efficient CRUD management of students, instructors, and sessions.</p>
+                            <h5>Tech Used:</h5>
+                            <p>Java, JavaFX, Scene Builder, Hibernate ORM, Layered Architecture (MVC).</p>
+                            <h5>What I Learned:</h5>
+                            <p>Using Hibernate ORM, layered architecture, and Scene Builder for efficient, SQL-free data management and intuitive UI design.</p>
+                            <a href="https://github.com/pulidu/ORM-Final-Project" class="github-btn" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
 
-            <div class="project-card">
-                <div class="card-image"><img src="assests/Images/Screenshot (156).png" alt="petshop"></div>
-                <div class="card-body">
-                    <h4>Pet Shop Management System (MVC Architecture)</h4>
-                    <h5>Short Description:</h5>
-                    <p>A JavaFX MVC app for managing pet inventory, customers, and sales with full CRUD and organized, maintainable code.</p>
-                    <h5>Tech Used:</h5>
-                    <p>Java, JavaFX, MVC Architecture.</p>
-                    <h5>What I Learned:</h5>
-                    <p>Using MVC architecture and JavaFX to build structured, intuitive apps with efficient data management and full CRUD functionality.</p>
-                    <a href="https://github.com/pulidu/Pet-Shop-Layered-Architecture" class="github-btn" target="_blank">View on GitHub</a>
+                    <div class="project-card">
+                        <div class="card-image"><img src="assests/Images/Screenshot (156).png" alt="petshop"></div>
+                        <div class="card-body">
+                            <h4>Pet Shop Management System (MVC Architecture)</h4>
+                            <h5>Short Description:</h5>
+                            <p>A JavaFX MVC app for managing pet inventory, customers, and sales with full CRUD and organized, maintainable code.</p>
+                            <h5>Tech Used:</h5>
+                            <p>Java, JavaFX, MVC Architecture.</p>
+                            <h5>What I Learned:</h5>
+                            <p>Using MVC architecture and JavaFX to build structured, intuitive apps with efficient data management and full CRUD functionality.</p>
+                            <a href="https://github.com/pulidu/Pet-Shop-Layered-Architecture" class="github-btn" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <h2 class="section-heading assignments-heading">Assignments</h2>
-        <div class="assignment-grid">
-            <div class="assignment-card">
-                <div class="card-body">
-                    <h5>Assignment 1: CSS Selectors Practice</h5>
-                    <p>Practiced CSS selectors for precise HTML styling.</p>
-                    <p>Learned to use CSS selectors for precise styling, apply consistent designs, and organize CSS for maintainable web pages.</p>
-                    <a href="https://github.com/pulidu/Assignment-01" class="github-btn" target="_blank">View on GitHub</a>
+                <h2 class="section-heading assignments-heading">Assignments</h2>
+                <div class="assignment-grid">
+                    <div class="assignment-card">
+                        <div class="card-body">
+                            <h5>Assignment 1: CSS Selectors Practice</h5>
+                            <p>Practiced CSS selectors for precise HTML styling.</p>
+                            <p>Learned to use CSS selectors for precise styling, apply consistent designs, and organize CSS for maintainable web pages.</p>
+                            <a href="https://github.com/pulidu/Assignment-01" class="github-btn" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
+                    <div class="assignment-card">
+                        <div class="card-body">
+                            <h5>Assignment 2: CSS Animations</h5>
+                            <p>Created animations and transitions with HTML & CSS, including sliders, loaders, and navigation effects.</p>
+                            <p>Learned How to use CSS keyframes, transitions, and positioning</p>
+                            <a href="https://github.com/pulidu/Assignment-02" class="github-btn" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
+                    <div class="assignment-card">
+                        <div class="card-body">
+                            <h5>Assignment 3: CSS Positioning & Layout Practice</h5>
+                            <p>Practiced web layouts with CSS positions, Box Model, and Grid.</p>
+                            <p>How to control element positioning, manage layout structure, and use modern CSS techniques for precise design.</p>
+                            <a href="https://github.com/pulidu/Assignment-03" class="github-btn" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="assignment-card">
-                <div class="card-body">
-                    <h5>Assignment 2: CSS Animations</h5>
-                    <p>Created animations and transitions with HTML & CSS, including sliders, loaders, and navigation effects.</p>
-                    <p>Learned How to use CSS keyframes, transitions, and positioning</p>
-                    <a href="https://github.com/pulidu/Assignment-02" class="github-btn" target="_blank">View on GitHub</a>
-                </div>
-            </div>
-            <div class="assignment-card">
-                <div class="card-body">
-                    <h5>Assignment 3: CSS Positioning & Layout Practice</h5>
-                    <p>Practiced web layouts with CSS positions, Box Model, and Grid.</p>
-                    <p>How to control element positioning, manage layout structure, and use modern CSS techniques for precise design.</p>
-                    <a href="https://github.com/pulidu/Assignment-03" class="github-btn" target="_blank">View on GitHub</a>
-                </div>
-            </div>
-            
-            
-        </div>
-    </div>
-</section>
+        </section>
 
----
         <section id="gallery">
             <div class="container">
                 <h2 class="section-heading">Gallery</h2>
@@ -222,7 +213,6 @@
             </div>
         </section>
 
----
         <section id="contact">
             <div class="container">
                 <h2 class="section-heading">Let Us Discuss Your Project</h2>
@@ -232,73 +222,133 @@
                     
                     <div class="service-card">
                         <div class="icon code">&lt;/&gt;</div>
-                        <h4>Web Development & Software Development</h4>
-                        <a href="#" class="read-more">Read More &rarr;</a>
+                        <h4>Web & Software Dev</h4>
+                        <span class="read-more-btn" data-modal="modal-web">Read More &rarr;</span>
                     </div>
                     
                     <div class="service-card">
                         <div class="icon uiux">💻</div>
                         <h4>UI/UX Design</h4>
-                        <a href="#" class="read-more">Read More &rarr;</a>
+                         <span class="read-more-btn" data-modal="modal-ui">Read More &rarr;</span>
                     </div>
                     
                     <div class="service-card">
                         <div class="icon app">📱</div>
                         <h4>App Development</h4>
-                        <a href="#" class="read-more">Read More &rarr;</a>
+                         <span class="read-more-btn" data-modal="modal-app">Read More &rarr;</span>
                     </div>
                     
                     <div class="service-card">
                         <div class="icon design">🎨</div>
-                        <h4>Branding & Graphic Design</h4>
-                        <a href="#" class="read-more">Read More &rarr;</a>
+                        <h4>Branding & Graphics</h4>
+                         <span class="read-more-btn" data-modal="modal-brand">Read More &rarr;</span>
                     </div>
                 </div>
                 
                 <div class="contact-form-container">
                     <h3>Send a Message</h3>
-
-                       <form action="https://formspree.io/f/manawaeg" method="POST">
-                           <div class="form-grid">
+                    <form action="https://formspree.io/f/manawaeg" method="POST">
+                        <div class="form-grid">
+                            <label for="name" class="form-label">Name</label>
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                            </div>
                 
-                           <label for="name" class="form-label">Name</label>
-                           <div class="form-group">
-                             <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                           </div>
-                
-                           <label for="email" class="form-label">Email</label>
-                           <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <div class="form-group">
                                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                           </div>
+                            </div>
                 
-                           <label for="subject" class="form-label">Subject</label>
-                           <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <div class="form-group">
                                 <input type="text" id="subject" name="subject" placeholder="Subject of your message" required>
-                           </div>
+                            </div>
                 
-                           <label for="message" class="form-label">Message</label>
-                           <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <div class="form-group">
                                 <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
-                           </div>
+                            </div>
 
-                           <div class="form-submit-row">
+                            <div class="form-submit-row">
                                 <button type="submit" class="submit-btn">Send Message</button>
-                           </div>
-                           </div>
-                       </form>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
 
----
+        <div class="services-modal" id="modal-web">
+            <div class="services-modal-content">
+                <i class="fas fa-times modal-close"></i>
+                <h3>Web & Software Developer</h3>
+                <p>Services with experience in building robust applications using Java, JavaFX, and modern web technologies.</p>
+                
+                <ul class="services-modal-list">
+                    <li><i class="fas fa-check-circle"></i> I develop the user interface.</li>
+                    <li><i class="fas fa-check-circle"></i> Web page development (HTML/CSS/JS).</li>
+                    <li><i class="fas fa-check-circle"></i> I create UX element interactions.</li>
+                    <li><i class="fas fa-check-circle"></i> Backend logic integration (Java/SQL).</li>
+                    <li><i class="fas fa-check-circle"></i> Design and mockups of products for companies.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="services-modal" id="modal-ui">
+            <div class="services-modal-content">
+                <i class="fas fa-times modal-close"></i>
+                <h3>UI/UX Designer</h3>
+                <p>Creating intuitive and visually appealing designs that prioritize user experience and accessibility.</p>
+                
+                <ul class="services-modal-list">
+                    <li><i class="fas fa-check-circle"></i> User Research & Persona creation.</li>
+                    <li><i class="fas fa-check-circle"></i> Wireframing & Prototyping (Figma).</li>
+                    <li><i class="fas fa-check-circle"></i> Interactive Design elements.</li>
+                    <li><i class="fas fa-check-circle"></i> Usability Testing.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="services-modal" id="modal-app">
+            <div class="services-modal-content">
+                <i class="fas fa-times modal-close"></i>
+                <h3>App Developer</h3>
+                <p>Developing functional and efficient mobile and desktop applications tailored to client needs.</p>
+                
+                <ul class="services-modal-list">
+                    <li><i class="fas fa-check-circle"></i> Desktop App Development (JavaFX).</li>
+                    <li><i class="fas fa-check-circle"></i> Cross-platform mobile solutions.</li>
+                    <li><i class="fas fa-check-circle"></i> API Integration & Database Management.</li>
+                    <li><i class="fas fa-check-circle"></i> App maintenance and optimization.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="services-modal" id="modal-brand">
+            <div class="services-modal-content">
+                <i class="fas fa-times modal-close"></i>
+                <h3>Branding & Graphics</h3>
+                <p>Crafting unique visual identities that help businesses stand out in the market.</p>
+                
+                <ul class="services-modal-list">
+                    <li><i class="fas fa-check-circle"></i> Logo Design & Brand Identity.</li>
+                    <li><i class="fas fa-check-circle"></i> Marketing materials & Social Media Graphics.</li>
+                    <li><i class="fas fa-check-circle"></i> Visual storytelling.</li>
+                    <li><i class="fas fa-check-circle"></i> Photo editing and retouching.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
     <footer>
         <div class="container">
             <div class="footer-social">
                 <p>CONNECT WITH ME ON SOCIAL MEDIA</p>
-               <div class="social-links">
+                <div class="social-links">
                     <a href="https://www.linkedin.com/in/pulindu-godage-208568379/" target="_blank" aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
-                      </a>
+                    </a>
                     <a href="https://wa.me/+94701317931" target="_blank" aria-label="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
@@ -359,15 +409,14 @@
         </div>
     </footer>
 
-    <!-- ADDED: This script provides the click functionality -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // --- Navigation Menu Logic ---
             const menuIcon = document.getElementById('menu-icon');
             const navMenu = document.querySelector('nav');
             const icon = menuIcon.querySelector('i');
             const navLinks = document.querySelectorAll('nav ul li a');
 
-            // Toggle menu on icon click
             menuIcon.addEventListener('click', () => {
                 navMenu.classList.toggle('nav-active');
                 
@@ -380,7 +429,6 @@
                 }
             });
 
-            // Close menu when a link is clicked
             navLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     if (navMenu.classList.contains('nav-active')) {
@@ -390,8 +438,42 @@
                     }
                 });
             });
+
+            // --- SERVICES MODAL LOGIC (New Implementation) ---
+            
+            const modalBtns = document.querySelectorAll('.read-more-btn');
+            const modals = document.querySelectorAll('.services-modal');
+            const closeBtns = document.querySelectorAll('.modal-close');
+
+            // Function to open modal
+            modalBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault(); 
+                    const modalId = btn.getAttribute('data-modal');
+                    const modal = document.getElementById(modalId);
+                    if(modal) {
+                        modal.classList.add('active-modal');
+                    }
+                });
+            });
+
+            // Function to close modal via X button
+            closeBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const modal = btn.closest('.services-modal');
+                    modal.classList.remove('active-modal');
+                });
+            });
+
+            // Function to close modal by clicking outside content
+            modals.forEach(modal => {
+                modal.addEventListener('click', (e) => {
+                    if(e.target === modal) {
+                        modal.classList.remove('active-modal');
+                    }
+                });
+            });
         });
     </script>
-    </main>
 </body>
 </html>
